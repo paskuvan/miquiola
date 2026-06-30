@@ -1,65 +1,277 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { PIEZAS, MOODS } from './data/piezas';
+import TarjetaPieza from './components/TarjetaPieza';
 
 export default function Home() {
+  const destacadas = PIEZAS.filter(p => p.disponible).slice(0, 3);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <Hero />
+      <MoodBar />
+      <Destacadas piezas={destacadas} />
+      <Manifiesto />
+    </>
+  );
+}
+
+function Hero() {
+  return (
+    <section style={{
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+      minHeight: 'calc(100vh - 64px)',
+    }} className="hero-grid">
+      <div style={{
+        backgroundColor: '#DDD5C8',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '500px',
+      }}>
+        <span style={{
+          fontFamily: 'var(--font-mono)',
+          fontSize: '0.65rem',
+          letterSpacing: '0.1em',
+          color: 'var(--gris)',
+        }}>
+          IMAGEN HERO
+        </span>
+      </div>
+
+      <div style={{
+        padding: '4rem 4rem 4rem 5rem',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        gap: '2rem',
+      }}>
+        <div>
+          <p style={{
+            fontFamily: 'var(--font-mono)',
+            fontSize: '0.65rem',
+            letterSpacing: '0.15em',
+            color: 'var(--gris)',
+            textTransform: 'uppercase',
+            marginBottom: '1.5rem',
+          }}>
+            Taller artesanal · Santiago, Chile
           </p>
+          <h1 style={{
+            fontFamily: 'var(--font-serif)',
+            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+            fontWeight: 300,
+            lineHeight: 1.1,
+            letterSpacing: '-0.01em',
+          }}>
+            Piezas que<br />
+            <em>permanecen</em>
+          </h1>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+
+        <p style={{
+          fontFamily: 'var(--font-sans)',
+          fontSize: '0.95rem',
+          color: 'var(--carbon-2)',
+          lineHeight: 1.8,
+          maxWidth: '380px',
+          fontWeight: 300,
+        }}>
+          Cerámica de gres y porcelana hecha a mano. Cada pieza lleva las huellas del proceso y no se repite exactamente.
+        </p>
+
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <Link href="/coleccion" style={{
+            fontFamily: 'var(--font-mono)',
+            fontSize: '0.65rem',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            color: 'var(--crema)',
+            backgroundColor: 'var(--carbon)',
+            padding: '0.9rem 2rem',
+            textDecoration: 'none',
+          }}>
+            Ver colección
+          </Link>
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://wa.me/56912345678?text=Hola,%20me%20interesa%20una%20pieza%20de%20Miquiola"
             target="_blank"
             rel="noopener noreferrer"
+            style={{
+              fontFamily: 'var(--font-mono)',
+              fontSize: '0.65rem',
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: 'var(--carbon)',
+              border: '1px solid var(--carbon)',
+              padding: '0.9rem 2rem',
+              textDecoration: 'none',
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            WhatsApp
           </a>
         </div>
-      </main>
-    </div>
+      </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .hero-grid { grid-template-columns: 1fr !important; }
+          .hero-grid > div:last-child { padding: 2.5rem 1.5rem !important; }
+        }
+      `}</style>
+    </section>
+  );
+}
+
+function MoodBar() {
+  return (
+    <section style={{
+      borderTop: '1px solid var(--crema-2)',
+      borderBottom: '1px solid var(--crema-2)',
+      padding: '1rem 2rem',
+      overflowX: 'auto',
+    }}>
+      <div style={{
+        maxWidth: '1400px',
+        margin: '0 auto',
+        display: 'flex',
+        gap: '2.5rem',
+        alignItems: 'center',
+        whiteSpace: 'nowrap',
+      }}>
+        <span style={{
+          fontFamily: 'var(--font-mono)',
+          fontSize: '0.6rem',
+          letterSpacing: '0.1em',
+          color: 'var(--gris)',
+          textTransform: 'uppercase',
+          flexShrink: 0,
+        }}>
+          Explorar por mood
+        </span>
+        {MOODS.map(mood => (
+          <Link
+            key={mood.slug}
+            href={`/coleccion?mood=${mood.slug}`}
+            style={{
+              fontFamily: 'var(--font-serif)',
+              fontSize: '1rem',
+              fontStyle: 'italic',
+              fontWeight: 300,
+              color: 'var(--carbon)',
+              textDecoration: 'none',
+              flexShrink: 0,
+            }}
+          >
+            {mood.label}
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Destacadas({ piezas }) {
+  return (
+    <section style={{
+      maxWidth: '1400px',
+      margin: '0 auto',
+      padding: '5rem 2rem',
+    }}>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'baseline',
+        marginBottom: '3rem',
+      }}>
+        <h2 style={{
+          fontFamily: 'var(--font-serif)',
+          fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
+          fontWeight: 300,
+          fontStyle: 'italic',
+        }}>
+          Nuevas en el taller
+        </h2>
+        <Link href="/coleccion" style={{
+          fontFamily: 'var(--font-mono)',
+          fontSize: '0.65rem',
+          letterSpacing: '0.1em',
+          textTransform: 'uppercase',
+          color: 'var(--gris)',
+          textDecoration: 'none',
+        }}>
+          Ver todo →
+        </Link>
+      </div>
+
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+        gap: '2rem',
+      }}>
+        {piezas.map(pieza => (
+          <TarjetaPieza key={pieza.slug} pieza={pieza} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Manifiesto() {
+  return (
+    <section style={{
+      backgroundColor: 'var(--carbon)',
+      color: 'var(--crema)',
+      padding: '6rem 2rem',
+    }}>
+      <div style={{
+        maxWidth: '680px',
+        margin: '0 auto',
+        textAlign: 'center',
+      }}>
+        <p style={{
+          fontFamily: 'var(--font-mono)',
+          fontSize: '0.6rem',
+          letterSpacing: '0.15em',
+          color: 'var(--gris)',
+          textTransform: 'uppercase',
+          marginBottom: '2rem',
+        }}>
+          Del taller
+        </p>
+        <blockquote style={{
+          fontFamily: 'var(--font-serif)',
+          fontSize: 'clamp(1.4rem, 3vw, 2rem)',
+          fontWeight: 300,
+          lineHeight: 1.5,
+          fontStyle: 'italic',
+        }}>
+          "Trabajo con gres porque guarda la memoria del fuego. Cada pieza sale distinta y eso no es un error — es la firma."
+        </blockquote>
+        <p style={{
+          fontFamily: 'var(--font-sans)',
+          fontSize: '0.8rem',
+          color: 'var(--gris)',
+          marginTop: '2rem',
+          letterSpacing: '0.05em',
+        }}>
+          — Miquiola
+        </p>
+        <Link href="/nosotras" style={{
+          display: 'inline-block',
+          marginTop: '2.5rem',
+          fontFamily: 'var(--font-mono)',
+          fontSize: '0.65rem',
+          letterSpacing: '0.12em',
+          textTransform: 'uppercase',
+          color: 'var(--crema)',
+          border: '1px solid var(--crema)',
+          padding: '0.8rem 1.8rem',
+          textDecoration: 'none',
+        }}>
+          Conocer el taller
+        </Link>
+      </div>
+    </section>
   );
 }
