@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function TarjetaPieza({ pieza }) {
   return (
@@ -7,7 +8,7 @@ export default function TarjetaPieza({ pieza }) {
         {/* Imagen */}
         <div style={{
           backgroundColor: '#DDD5C8',
-          aspectRatio: '3/4',
+          paddingBottom: '133%',
           position: 'relative',
           overflow: 'hidden',
           marginBottom: '1rem',
@@ -29,45 +30,16 @@ export default function TarjetaPieza({ pieza }) {
             </div>
           )}
 
-          {/* Paleta de color */}
-          <div style={{
-            position: 'absolute',
-            bottom: '1rem',
-            right: '1rem',
-            display: 'flex',
-            gap: '0.3rem',
-          }}>
-            {pieza.paleta.map((color, i) => (
-              <div
-                key={i}
-                style={{
-                  width: '14px',
-                  height: '14px',
-                  borderRadius: '50%',
-                  backgroundColor: color,
-                  border: '1px solid rgba(0,0,0,0.1)',
-                }}
-              />
-            ))}
-          </div>
-
-          {/* Placeholder imagen */}
-          <div style={{
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-            <span style={{
-              fontFamily: 'var(--font-mono)',
-              fontSize: '0.6rem',
-              letterSpacing: '0.08em',
-              color: 'var(--gris)',
-            }}>
-              {pieza.slug.toUpperCase()}
-            </span>
-          </div>
+          
+          {pieza.imagenes?.[0] ? (
+            <Image
+              src={pieza.imagenes[0]}
+              alt={pieza.nombre}
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+          ) : null}
         </div>
 
         {/* Info */}

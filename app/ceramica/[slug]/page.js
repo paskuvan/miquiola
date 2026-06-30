@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { PIEZAS, MOODS, getPiezaBySlug } from '../../data/piezas';
 import TarjetaPieza from '../../components/TarjetaPieza';
 
@@ -39,57 +40,19 @@ export default async function PDP({ params }) {
         minHeight: 'calc(100vh - 64px)',
       }} className="pdp-grid">
         {/* Imagen */}
-        <div style={{ position: 'relative', backgroundColor: '#DDD5C8' }}>
-          <div style={{
-            width: '100%',
-            height: '100%',
-            minHeight: '600px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-            <span style={{
-              fontFamily: 'var(--font-mono)',
-              fontSize: '0.65rem',
-              letterSpacing: '0.1em',
-              color: 'var(--gris)',
-            }}>
-              {pieza.slug.toUpperCase()}
-            </span>
-          </div>
+        <div style={{ position: 'relative', backgroundColor: '#DDD5C8', minHeight: '600px' }}>
+          {pieza.imagenes?.[0] && (
+            <Image
+              src={pieza.imagenes[0]}
+              alt={pieza.nombre}
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="55vw"
+              priority
+            />
+          )}
 
-          {/* Paleta de colores */}
-          <div style={{
-            position: 'absolute',
-            bottom: '2rem',
-            left: '2rem',
-          }}>
-            <p style={{
-              fontFamily: 'var(--font-mono)',
-              fontSize: '0.55rem',
-              letterSpacing: '0.1em',
-              color: 'var(--gris)',
-              textTransform: 'uppercase',
-              marginBottom: '0.5rem',
-            }}>
-              Paleta
-            </p>
-            <div style={{ display: 'flex', gap: '0.5rem' }}>
-              {pieza.paleta.map((color, i) => (
-                <div
-                  key={i}
-                  title={color}
-                  style={{
-                    width: '28px',
-                    height: '28px',
-                    borderRadius: '50%',
-                    backgroundColor: color,
-                    border: '1px solid rgba(0,0,0,0.1)',
-                  }}
-                />
-              ))}
-            </div>
-          </div>
+          
         </div>
 
         {/* Info */}
