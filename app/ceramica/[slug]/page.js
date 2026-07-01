@@ -138,44 +138,7 @@ export default async function PDP({ params }) {
             {pieza.descripcion}
           </p>
 
-          {/* Metadata */}
-          <div style={{
-            borderTop: '1px solid var(--crema-2)',
-            paddingTop: '1.5rem',
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '1rem',
-          }}>
-            <MetaDato label="Dimensiones" valor={pieza.dimensiones} />
-            <MetaDato label="Cuidado" valor={pieza.cuidado} />
-          </div>
-
-          {/* Proceso */}
-          <div>
-            <p style={{
-              fontFamily: 'var(--font-mono)',
-              fontSize: '0.6rem',
-              letterSpacing: '0.12em',
-              color: 'var(--gris)',
-              textTransform: 'uppercase',
-              marginBottom: '0.75rem',
-            }}>
-              Proceso
-            </p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
-              {pieza.proceso.split('→').map((paso, i) => (
-                <span key={i} style={{
-                  fontFamily: 'var(--font-sans)',
-                  fontSize: '0.75rem',
-                  color: 'var(--carbon-2)',
-                  fontWeight: 300,
-                }}>
-                  {i > 0 && <span style={{ color: 'var(--acento)', margin: '0 0.3rem' }}>→</span>}
-                  {paso.trim()}
-                </span>
-              ))}
-            </div>
-          </div>
+          
 
           {/* CTA */}
           <div style={{ marginTop: '1rem' }}>
@@ -228,7 +191,7 @@ export default async function PDP({ params }) {
               textAlign: 'center',
               lineHeight: 1.6,
             }}>
-              Despacho a todo Chile · Retiro en Santiago disponible
+              
             </p>
           </div>
         </div>

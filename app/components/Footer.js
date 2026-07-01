@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <Label>Cuidado</Label>
+          <Label>Sobre Miquiola</Label>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.8rem', color: 'var(--gris)', lineHeight: 1.8 }}>
             Cada pieza viene con instrucciones de cuidado. Escríbenos si tienes dudas.
           </p>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { PIEZAS, MOODS } from './data/piezas';
 import TarjetaPieza from './components/TarjetaPieza';
 
@@ -23,20 +24,18 @@ function Hero() {
       minHeight: 'calc(100vh - 64px)',
     }} className="hero-grid">
       <div style={{
-        backgroundColor: '#DDD5C8',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+        position: 'relative',
         minHeight: '500px',
+        backgroundColor: '#DDD5C8',
       }}>
-        <span style={{
-          fontFamily: 'var(--font-mono)',
-          fontSize: '0.65rem',
-          letterSpacing: '0.1em',
-          color: 'var(--gris)',
-        }}>
-          IMAGEN HERO
-        </span>
+        <Image
+          src="/piezas/pieza_14.png"
+          alt="Cerámica Miquiola"
+          fill
+          style={{ objectFit: 'cover' }}
+          sizes="50vw"
+          priority
+        />
       </div>
 
       <div style={{
@@ -257,20 +256,7 @@ function Manifiesto() {
         }}>
           — Miquiola
         </p>
-        <Link href="/nosotras" style={{
-          display: 'inline-block',
-          marginTop: '2.5rem',
-          fontFamily: 'var(--font-mono)',
-          fontSize: '0.65rem',
-          letterSpacing: '0.12em',
-          textTransform: 'uppercase',
-          color: 'var(--crema)',
-          border: '1px solid var(--crema)',
-          padding: '0.8rem 1.8rem',
-          textDecoration: 'none',
-        }}>
-          Conocer el taller
-        </Link>
+       
       </div>
     </section>
   );
