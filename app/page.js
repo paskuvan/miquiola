@@ -4,7 +4,8 @@ import { PIEZAS, MOODS } from './data/piezas';
 import TarjetaPieza from './components/TarjetaPieza';
 
 export default function Home() {
-  const destacadas = PIEZAS.filter(p => p.disponible).slice(0, 3);
+  const slugsDestacadas = ['pieza-11', 'pieza-18', 'pieza-25', 'pieza-24'];
+  const destacadas = slugsDestacadas.map(s => PIEZAS.find(p => p.slug === s)).filter(Boolean);
 
   return (
     <>
@@ -172,16 +173,17 @@ function MoodBar() {
 
 function Destacadas({ piezas }) {
   return (
-    <section style={{
-      maxWidth: '1400px',
-      margin: '0 auto',
-      padding: '5rem 2rem',
-    }}>
+    <section style={{ padding: '5rem 0' }}>
       <div style={{
+        maxWidth: '1400px',
+        marginTop: 0,
+        marginBottom: '3rem',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        padding: '0 2rem',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'baseline',
-        marginBottom: '3rem',
       }}>
         <h2 style={{
           fontFamily: 'var(--font-serif)',
@@ -204,14 +206,26 @@ function Destacadas({ piezas }) {
       </div>
 
       <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-        gap: '2rem',
+        display: 'flex',
+        overflowX: 'auto',
+        gap: '1.5rem',
+        padding: '0 2rem 1.5rem',
+        scrollSnapType: 'x mandatory',
+        WebkitOverflowScrolling: 'touch',
+        scrollbarWidth: 'none',
       }}>
         {piezas.map(pieza => (
-          <TarjetaPieza key={pieza.slug} pieza={pieza} />
+          <div key={pieza.slug} style={{
+            flexShrink: 0,
+            width: 'clamp(260px, 28vw, 380px)',
+            scrollSnapAlign: 'start',
+          }}>
+            <TarjetaPieza pieza={pieza} />
+          </div>
         ))}
       </div>
+
+      <style>{`.destacadas-scroll::-webkit-scrollbar { display: none; }`}</style>
     </section>
   );
 }
