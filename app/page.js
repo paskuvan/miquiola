@@ -94,7 +94,7 @@ function Hero() {
             Ver colección
           </Link>
           <a
-            href="https://wa.me/56912345678?text=Hola,%20me%20interesa%20una%20pieza%20de%20Miquiola"
+            href="https://wa.me/56944600260?text=Hola,%20me%20interesa%20una%20pieza%20de%20Miquiola"
             target="_blank"
             rel="noopener noreferrer"
             style={{

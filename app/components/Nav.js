@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Nav() {
@@ -18,22 +19,22 @@ export default function Nav() {
         maxWidth: '1400px',
         margin: '0 auto',
         padding: '0 2rem',
-        height: '64px',
+        height: '80px',
+        padding: '0 2rem',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
       }}>
         {/* Logo */}
-        <Link href="/" style={{
-          fontFamily: 'var(--font-serif)',
-          fontSize: '1.5rem',
-          fontWeight: 300,
-          letterSpacing: '0.08em',
-          color: 'var(--carbon)',
-          textDecoration: 'none',
-          fontStyle: 'italic',
-        }}>
-          miquiola
+        <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
+          <Image
+            src="/logo.png"
+            alt="Miquiola"
+            width={120}
+            height={40}
+            style={{ objectFit: 'contain' }}
+            priority
+          />
         </Link>
 
         {/* Nav desktop */}
@@ -107,7 +108,7 @@ function NavLink({ href, children, onClick }) {
 function ContactLink() {
   return (
     <a
-      href="https://wa.me/56912345678?text=Hola,%20me%20interesa%20una%20pieza%20de%20Miquiola"
+      href="https://wa.me/56944600260?text=Hola,%20me%20interesa%20una%20pieza%20de%20Miquiola"
       target="_blank"
       rel="noopener noreferrer"
       style={{

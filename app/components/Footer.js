@@ -33,7 +33,7 @@ export default function Footer() {
           <Label>Información</Label>
           <FooterLink href="/nosotras">Sobre nosotras</FooterLink>
           <FooterLink
-            href="https://wa.me/56912345678"
+            href="https://wa.me/56944600260"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -44,7 +44,7 @@ export default function Footer() {
         <div>
           <Label>Sobre Miquiola</Label>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.8rem', color: 'var(--gris)', lineHeight: 1.8 }}>
-            Cada pieza viene con instrucciones de cuidado. Escríbenos si tienes dudas.
+            Piezas hechas a mano para hogares con alma 🌿
           </p>
         </div>
       </div>

@@ -31,7 +31,7 @@ export default async function PDP({ params }) {
   );
   const relacionadas = [...porMood, ...resto].slice(0, 4);
 
-  const waUrl = `https://wa.me/56912345678?text=${encodeURIComponent(
+  const waUrl = `https://wa.me/56944600260?text=${encodeURIComponent(
     `Hola, me interesa la pieza "${pieza.nombre}" de Miquiola. ¿Está disponible?`
   )}`;
 
