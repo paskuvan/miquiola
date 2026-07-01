@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Miquiola — Sobre mí',
@@ -38,20 +39,17 @@ export default function Nosotras() {
         minHeight: '60vh',
       }} className="nosotras-grid">
         <div style={{
-          backgroundColor: '#DDD5C8',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
+          position: 'relative',
           minHeight: '400px',
+          backgroundColor: '#DDD5C8',
         }}>
-          <span style={{
-            fontFamily: 'var(--font-mono)',
-            fontSize: '0.65rem',
-            letterSpacing: '0.1em',
-            color: 'var(--gris)',
-          }}>
-            FOTO
-          </span>
+          <Image
+            src="/piezas/pieza_14.png"
+            alt="Miquiola cerámica pintada a mano"
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="50vw"
+          />
         </div>
 
         <div style={{

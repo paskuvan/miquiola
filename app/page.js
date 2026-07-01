@@ -30,7 +30,7 @@ function Hero() {
         backgroundColor: '#DDD5C8',
       }}>
         <Image
-          src="/piezas/pieza_14.png"
+          src="/piezas/pieza_26.png"
           alt="Cerámica Miquiola"
           fill
           style={{ objectFit: 'cover' }}

@@ -25,8 +25,8 @@ export default function Footer() {
         <div>
           <Label>Tienda</Label>
           <FooterLink href="/coleccion">Colección</FooterLink>
-          <FooterLink href="/coleccion?mood=cocina-calida">Cocina cálida</FooterLink>
-          <FooterLink href="/coleccion?mood=pieza-statement">Pieza statement</FooterLink>
+          <FooterLink href="/coleccion?mood=mesa">Mesa</FooterLink>
+          <FooterLink href="/coleccion?mood=jarro">Jarro</FooterLink>
         </div>
 
         <div>

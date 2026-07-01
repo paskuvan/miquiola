@@ -23,9 +23,13 @@ export default async function PDP({ params }) {
   const pieza = getPiezaBySlug(slug);
   if (!pieza) notFound();
 
-  const relacionadas = PIEZAS.filter(
+  const porMood = PIEZAS.filter(
     p => p.slug !== pieza.slug && p.moods.some(m => pieza.moods.includes(m))
-  ).slice(0, 3);
+  );
+  const resto = PIEZAS.filter(
+    p => p.slug !== pieza.slug && !porMood.includes(p)
+  );
+  const relacionadas = [...porMood, ...resto].slice(0, 4);
 
   const waUrl = `https://wa.me/56912345678?text=${encodeURIComponent(
     `Hola, me interesa la pieza "${pieza.nombre}" de Miquiola. ¿Está disponible?`
@@ -199,27 +203,38 @@ export default async function PDP({ params }) {
 
       {/* Piezas relacionadas */}
       {relacionadas.length > 0 && (
-        <section style={{
-          maxWidth: '1400px',
-          margin: '0 auto',
-          padding: '5rem 2rem',
-        }}>
-          <h2 style={{
-            fontFamily: 'var(--font-serif)',
-            fontSize: '1.5rem',
-            fontWeight: 300,
-            fontStyle: 'italic',
+        <section style={{ padding: '5rem 0' }}>
+          <div style={{
+            paddingLeft: '2rem',
+            paddingRight: '2rem',
             marginBottom: '2.5rem',
           }}>
-            Del mismo mood
-          </h2>
+            <h2 style={{
+              fontFamily: 'var(--font-serif)',
+              fontSize: '1.5rem',
+              fontWeight: 300,
+              fontStyle: 'italic',
+            }}>
+              También te puede gustar
+            </h2>
+          </div>
           <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
-            gap: '2rem',
+            display: 'flex',
+            overflowX: 'auto',
+            gap: '1.5rem',
+            padding: '0 2rem 1.5rem',
+            scrollSnapType: 'x mandatory',
+            WebkitOverflowScrolling: 'touch',
+            scrollbarWidth: 'none',
           }}>
             {relacionadas.map(p => (
-              <TarjetaPieza key={p.slug} pieza={p} />
+              <div key={p.slug} style={{
+                flexShrink: 0,
+                width: 'clamp(240px, 25vw, 340px)',
+                scrollSnapAlign: 'start',
+              }}>
+                <TarjetaPieza pieza={p} />
+              </div>
             ))}
           </div>
         </section>
