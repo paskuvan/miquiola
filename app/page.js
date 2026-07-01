@@ -76,7 +76,7 @@ function Hero() {
           maxWidth: '380px',
           fontWeight: 300,
         }}>
-          Cerámica de gres y porcelana hecha a mano. Cada pieza lleva las huellas del proceso y no se repite exactamente.
+          Cerámica pintada a mano con esmalte cerámico. Cada pieza tiene su propio motivo y no se repite exactamente.
         </p>
 
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -245,7 +245,7 @@ function Manifiesto() {
           lineHeight: 1.5,
           fontStyle: 'italic',
         }}>
-          "Trabajo con gres porque guarda la memoria del fuego. Cada pieza sale distinta y eso no es un error — es la firma."
+          "Pinto cada pieza sola, con pincel, sin molde. Lo que sale distinto no es un error — es la firma."
         </blockquote>
         <p style={{
           fontFamily: 'var(--font-sans)',

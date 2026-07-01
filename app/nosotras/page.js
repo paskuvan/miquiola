@@ -1,35 +1,30 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Nosotras — Miquiola',
-  description: 'El taller, el proceso y la historia detrás de Miquiola.',
+  title: 'Miquiola — Sobre mí',
+  description: 'Cerámica pintada a mano. Una persona, un pincel, cada pieza distinta.',
 };
 
 const PROCESO = [
   {
     num: '01',
-    titulo: 'Diseño',
-    texto: 'Cada pieza parte de un boceto o de una intuición en el taller. No hay producción en serie: si una forma no me convence en las manos, no sale.',
+    titulo: 'Elijo la pieza',
+    texto: 'Trabajo con cerámica de calidad ya formada. La elijo por su forma, su peso, cómo se siente en la mano. Si no me convence vacía, no me va a convencer pintada.',
   },
   {
     num: '02',
-    titulo: 'Modelado',
-    texto: 'Trabajo principalmente al torno y a mano. El gres me permite grosor, peso y textura que no se pueden fingir. La porcelana es para cuando quiero blanco y silencio.',
+    titulo: 'Diseño el motivo',
+    texto: 'Boceto el diseño pensando en la pieza específica: su curva, su tamaño, hacia dónde mira. Ningún motivo se repite exactamente porque ninguna pieza es igual a otra.',
   },
   {
     num: '03',
-    titulo: 'Secado y biscocido',
-    texto: 'Primera cocción a 950°C. La pieza se endurece y queda lista para recibir el esmalte. En esta etapa suelo romper lo que no me convence.',
+    titulo: 'Pinto a mano',
+    texto: 'Uso esmalte cerámico aplicado con pincel. Es un trabajo lento, de capas, de correcciones. La mano tiembla un poco y eso se nota — y está bien que se note.',
   },
   {
     num: '04',
-    titulo: 'Esmaltado',
-    texto: 'Mezclo mis propios esmaltes o trabajo con minerales naturales como ceniza volcánica. El resultado final en el horno siempre tiene algo de sorpresa.',
-  },
-  {
-    num: '05',
-    titulo: 'Horneado final',
-    texto: 'Segunda cocción entre 1260°C y 1300°C. A esa temperatura el gres vitrifica y los esmaltes se funden al cuerpo. Lo que sale del horno es permanente.',
+    titulo: 'La pieza queda lista',
+    texto: 'El esmalte seca y queda fijo. Lo que ves es permanente: el color, el trazo, la imperfección. No hay dos piezas iguales y no las va a haber.',
   },
 ];
 
@@ -55,7 +50,7 @@ export default function Nosotras() {
             letterSpacing: '0.1em',
             color: 'var(--gris)',
           }}>
-            FOTO TALLER
+            FOTO
           </span>
         </div>
 
@@ -73,7 +68,7 @@ export default function Nosotras() {
             color: 'var(--gris)',
             textTransform: 'uppercase',
           }}>
-            El taller
+            Sobre mí
           </p>
           <h1 style={{
             fontFamily: 'var(--font-serif)',
@@ -81,8 +76,8 @@ export default function Nosotras() {
             fontWeight: 300,
             lineHeight: 1.15,
           }}>
-            Hecho en Santiago,<br />
-            <em>con las manos</em>
+            Un pincel,<br />
+            <em>cada pieza distinta</em>
           </h1>
           <p style={{
             fontFamily: 'var(--font-sans)',
@@ -92,7 +87,7 @@ export default function Nosotras() {
             fontWeight: 300,
             maxWidth: '400px',
           }}>
-            Miquiola es un taller de cerámica unipersonal en Santiago de Chile. Trabajo con gres y porcelana desde 2019, haciendo piezas funcionales con carácter: para la mesa, la cocina y la casa.
+            Miquiola soy yo. Pinto cerámica a mano con esmalte cerámico — cada pieza tiene su propio motivo, su propio trazo, su propio tiempo.
           </p>
           <p style={{
             fontFamily: 'var(--font-sans)',
@@ -102,7 +97,7 @@ export default function Nosotras() {
             fontWeight: 300,
             maxWidth: '400px',
           }}>
-            Cada pieza es única. Las diferencias de tono, textura o forma no son defectos — son la evidencia de que fue hecha a mano, en un taller real, en una quema real.
+            No trabajo en serie. Cada pieza la pienso, la dibujo y la pinto sola. Lo que llega a tus manos no existía antes y no va a existir igual después.
           </p>
         </div>
       </section>
@@ -122,7 +117,7 @@ export default function Nosotras() {
             textTransform: 'uppercase',
             marginBottom: '0.75rem',
           }}>
-            Del boceto al horno
+            Cómo trabajo
           </p>
           <h2 style={{
             fontFamily: 'var(--font-serif)',
@@ -130,11 +125,11 @@ export default function Nosotras() {
             fontWeight: 300,
             fontStyle: 'italic',
           }}>
-            El proceso
+            Del boceto a tus manos
           </h2>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
           {PROCESO.map((paso, i) => (
             <div key={paso.num} style={{
               display: 'grid',
@@ -143,16 +138,14 @@ export default function Nosotras() {
               padding: '2.5rem 0',
               borderBottom: i < PROCESO.length - 1 ? '1px solid var(--crema-2)' : 'none',
             }}>
-              <div>
-                <span style={{
-                  fontFamily: 'var(--font-mono)',
-                  fontSize: '0.7rem',
-                  color: 'var(--gris)',
-                  letterSpacing: '0.1em',
-                }}>
-                  {paso.num}
-                </span>
-              </div>
+              <span style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.7rem',
+                color: 'var(--gris)',
+                letterSpacing: '0.1em',
+              }}>
+                {paso.num}
+              </span>
               <div>
                 <h3 style={{
                   fontFamily: 'var(--font-serif)',
@@ -192,7 +185,7 @@ export default function Nosotras() {
           fontStyle: 'italic',
           marginBottom: '2rem',
         }}>
-          ¿Te interesa una pieza o encargar algo especial?
+          ¿Te interesa una pieza o algo especial?
         </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <a
