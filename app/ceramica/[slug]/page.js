@@ -126,7 +126,7 @@ export default async function PDP({ params }) {
               color: pieza.disponible ? 'var(--carbon)' : 'var(--gris)',
             }}>
               {pieza.disponible
-                ? `$${pieza.precio.toLocaleString('es-CL')} CLP`
+                ? `$${pieza.precio.toLocaleString('es-CL')} CLP${pieza.precioLabel ? ` ${pieza.precioLabel}` : ''}`
                 : 'Sin stock'}
             </p>
           </div>
