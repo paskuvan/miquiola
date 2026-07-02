@@ -7,12 +7,24 @@ export default function TarjetaPieza({ pieza }) {
       <article style={{ cursor: 'pointer' }}>
         {/* Imagen */}
         <div style={{
-          backgroundColor: '#DDD5C8',
-          paddingBottom: '133%',
           position: 'relative',
-          overflow: 'hidden',
           marginBottom: '1rem',
+          aspectRatio: '4/5',
+          overflow: 'hidden',
+          backgroundColor: 'var(--crema-2)',
         }}>
+          {pieza.imagenes?.[0] ? (
+            <Image
+              src={pieza.imagenes[0]}
+              alt={pieza.nombre}
+              fill
+              style={{ objectFit: 'cover', objectPosition: pieza.imagenPosicion || 'center' }}
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+          ) : (
+            <div style={{ backgroundColor: '#DDD5C8', aspectRatio: '1', width: '100%' }} />
+          )}
+
           {!pieza.disponible && (
             <div style={{
               position: 'absolute',
@@ -29,17 +41,6 @@ export default function TarjetaPieza({ pieza }) {
               Agotada
             </div>
           )}
-
-          
-          {pieza.imagenes?.[0] ? (
-            <Image
-              src={pieza.imagenes[0]}
-              alt={pieza.nombre}
-              fill
-              style={{ objectFit: 'cover' }}
-              sizes="(max-width: 768px) 100vw, 33vw"
-            />
-          ) : null}
         </div>
 
         {/* Info */}
@@ -71,7 +72,7 @@ export default function TarjetaPieza({ pieza }) {
             fontWeight: 300,
           }}>
             {pieza.disponible
-              ? `$${pieza.precio.toLocaleString('es-CL')}`
+              ? `$${pieza.precio.toLocaleString('es-CL')}${pieza.precioLabel ? ` ${pieza.precioLabel}` : ''}`
               : 'Sin stock'}
           </p>
         </div>
