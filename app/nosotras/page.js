@@ -45,7 +45,7 @@ export default function Nosotras() {
         }}>
           <Image
             src="/piezas/pieza_14.png"
-            alt="Miquiola cerámica pintada a mano"
+            alt="Miquiola Cerámica pintado bajo cubierta"
             fill
             style={{ objectFit: 'cover' }}
             sizes="50vw"

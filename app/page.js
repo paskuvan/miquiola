@@ -77,7 +77,7 @@ function Hero() {
           maxWidth: '380px',
           fontWeight: 300,
         }}>
-          Cerámica pintada a mano con esmalte cerámico. Cada pieza tiene su propio motivo y no se repite exactamente.
+          Cerámica pintado bajo cubierta
         </p>
 
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
