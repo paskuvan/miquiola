@@ -101,14 +101,19 @@ function Coleccion() {
       ) : (
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+          gridTemplateColumns: 'repeat(3, 1fr)',
           gap: '2rem 1.5rem',
-        }}>
+        }} className="coleccion-grid">
           {piezasFiltradas.map(pieza => (
             <TarjetaPieza key={pieza.slug} pieza={pieza} />
           ))}
         </div>
       )}
+      <style>{`
+        @media (max-width: 768px) {
+          .coleccion-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 1rem 0.75rem !important; }
+        }
+      `}</style>
     </div>
   );
 }
