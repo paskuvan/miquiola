@@ -4,7 +4,7 @@ import { PIEZAS, MOODS } from './data/piezas';
 import TarjetaPieza from './components/TarjetaPieza';
 
 export default function Home() {
-  const slugsDestacadas = ['pieza-11', 'pieza-18', 'pieza-25', 'pieza-24'];
+  const slugsDestacadas = ['jarrito-sol', 'jarro-amapola', 'plato-miau', 'paleta-gallo'];
   const destacadas = slugsDestacadas.map(s => PIEZAS.find(p => p.slug === s)).filter(Boolean);
 
   return (

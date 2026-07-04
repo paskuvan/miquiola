@@ -26,7 +26,7 @@ export default function Footer() {
           <Label>Tienda</Label>
           <FooterLink href="/coleccion">Colección</FooterLink>
           <FooterLink href="/coleccion?mood=mesa">Mesa</FooterLink>
-          <FooterLink href="/coleccion?mood=jarro">Jarro</FooterLink>
+          <FooterLink href="/coleccion?mood=decoracion">Decoración</FooterLink>
         </div>
 
         <div>

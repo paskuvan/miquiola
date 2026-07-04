@@ -77,14 +77,6 @@ export default function Nav() {
         </div>
       )}
 
-      <style>{`
-        .nav-desktop { display: flex; }
-        .nav-mobile-btn { display: none; }
-        @media (max-width: 768px) {
-          .nav-desktop { display: none; }
-          .nav-mobile-btn { display: block; }
-        }
-      `}</style>
     </header>
   );
 }
