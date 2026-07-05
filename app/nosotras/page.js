@@ -2,8 +2,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'Miquiola — Sobre mí',
-  description: 'Cerámica pintada a mano. Una persona, un pincel, cada pieza distinta.',
+  title: 'Sobre mí',
+  description: 'Miquiola soy yo. Pinto cerámica a mano con esmalte cerámico en Santiago, Chile. Cada pieza tiene su propio motivo, trazo y tiempo — ninguna se repite.',
+  openGraph: {
+    title: 'Sobre mí — Miquiola',
+    description: 'Miquiola soy yo. Pinto cerámica a mano con esmalte cerámico en Santiago, Chile.',
+    url: 'https://miquiola.cl/nosotras',
+  },
 };
 
 const PROCESO = [

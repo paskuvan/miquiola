@@ -14,8 +14,23 @@ export async function generateMetadata({ params }) {
   const pieza = getPiezaBySlug(slug);
   if (!pieza) return {};
   return {
-    title: `${pieza.nombre} — Miquiola`,
+    title: pieza.nombre,
     description: pieza.descripcion,
+    openGraph: {
+      title: `${pieza.nombre} — Miquiola`,
+      description: pieza.descripcion,
+      url: `https://miquiola.cl/ceramica/${pieza.slug}`,
+      siteName: 'Miquiola',
+      images: [{ url: pieza.imagenes[0], width: 1200, height: 630, alt: pieza.nombre }],
+      locale: 'es_CL',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${pieza.nombre} — Miquiola`,
+      description: pieza.descripcion,
+      images: [pieza.imagenes[0]],
+    },
   };
 }
 
@@ -36,8 +51,26 @@ export default async function PDP({ params }) {
     `Hola, me interesa la pieza "${pieza.nombre}" de Miquiola. ¿Está disponible?`
   )}`;
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: pieza.nombre,
+    description: pieza.descripcion,
+    image: pieza.imagenes,
+    brand: { '@type': 'Brand', name: 'Miquiola' },
+    offers: {
+      '@type': 'Offer',
+      price: pieza.precio,
+      priceCurrency: 'CLP',
+      availability: pieza.disponible ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+      url: `https://miquiola.cl/ceramica/${pieza.slug}`,
+      seller: { '@type': 'Organization', name: 'Miquiola' },
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* PDP 50/50 */}
       <section style={{
         display: 'grid',
