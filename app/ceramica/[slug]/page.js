@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { PIEZAS, MOODS, getPiezaBySlug } from '../../data/piezas';
 import TarjetaPieza from '../../components/TarjetaPieza';
+import CarruselPiezas from '../../components/CarruselPiezas';
 
 export async function generateStaticParams() {
   return PIEZAS.map(p => ({ slug: p.slug }));
@@ -218,25 +219,7 @@ export default async function PDP({ params }) {
               También te puede gustar
             </h2>
           </div>
-          <div style={{
-            display: 'flex',
-            overflowX: 'auto',
-            gap: '1.5rem',
-            padding: '0 2rem 1.5rem',
-            scrollSnapType: 'x mandatory',
-            WebkitOverflowScrolling: 'touch',
-            scrollbarWidth: 'none',
-          }}>
-            {relacionadas.map(p => (
-              <div key={p.slug} style={{
-                flexShrink: 0,
-                width: 'clamp(240px, 25vw, 340px)',
-                scrollSnapAlign: 'start',
-              }}>
-                <TarjetaPieza pieza={p} />
-              </div>
-            ))}
-          </div>
+          <CarruselPiezas piezas={relacionadas} />
         </section>
       )}
 

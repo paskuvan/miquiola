@@ -2,9 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { PIEZAS, MOODS } from './data/piezas';
 import TarjetaPieza from './components/TarjetaPieza';
+import CarruselPiezas from './components/CarruselPiezas';
 
 export default function Home() {
-  const slugsDestacadas = ['jarrito-sol', 'jarro-amapola', 'plato-miau', 'paleta-gallo'];
+  const slugsDestacadas = ['anillero-gato', 'tina-rocio', 'plato-miau', 'ensaladera-nebula', 'tina-floral', 'salsera-ilusion'];
   const destacadas = slugsDestacadas.map(s => PIEZAS.find(p => p.slug === s)).filter(Boolean);
 
   return (
@@ -205,27 +206,7 @@ function Destacadas({ piezas }) {
         </Link>
       </div>
 
-      <div style={{
-        display: 'flex',
-        overflowX: 'auto',
-        gap: '1.5rem',
-        padding: '0 2rem 1.5rem',
-        scrollSnapType: 'x mandatory',
-        WebkitOverflowScrolling: 'touch',
-        scrollbarWidth: 'none',
-      }}>
-        {piezas.map(pieza => (
-          <div key={pieza.slug} style={{
-            flexShrink: 0,
-            width: 'clamp(260px, 28vw, 380px)',
-            scrollSnapAlign: 'start',
-          }}>
-            <TarjetaPieza pieza={pieza} />
-          </div>
-        ))}
-      </div>
-
-      <style>{`.destacadas-scroll::-webkit-scrollbar { display: none; }`}</style>
+      <CarruselPiezas piezas={piezas} />
     </section>
   );
 }
@@ -242,16 +223,6 @@ function Manifiesto() {
         margin: '0 auto',
         textAlign: 'center',
       }}>
-        <p style={{
-          fontFamily: 'var(--font-mono)',
-          fontSize: '0.6rem',
-          letterSpacing: '0.15em',
-          color: 'var(--gris)',
-          textTransform: 'uppercase',
-          marginBottom: '2rem',
-        }}>
-          Del taller
-        </p>
         <blockquote style={{
           fontFamily: 'var(--font-serif)',
           fontSize: 'clamp(1.4rem, 3vw, 2rem)',
@@ -259,7 +230,7 @@ function Manifiesto() {
           lineHeight: 1.5,
           fontStyle: 'italic',
         }}>
-          "Pinto cada pieza sola, con pincel, sin molde. Lo que sale distinto no es un error — es la firma."
+          "La cerámica ya existe. Yo solo le pongo lo que le falta: un motivo, un color, una historia que antes no tenía."
         </blockquote>
         <p style={{
           fontFamily: 'var(--font-sans)',

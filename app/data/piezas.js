@@ -299,7 +299,7 @@ export const PIEZAS = [
     disponible: true,
     unidades: 1,
     moods: ['decoracion'],
-    imagenes: ['/piezas/pieza_24.png'],
+    imagenes: ['/piezas/tina-roja.png'],
     descripcion: 'Mini bañera artesanal de cerámica con acabado brillante y detalles florales. Perfecta para organizar pequeños accesorios o decorar con un estilo único.',
     cuidado: 'Apto lavavajillas.',
     proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
