@@ -56,7 +56,7 @@ function Hero() {
             textTransform: 'uppercase',
             marginBottom: '1.5rem',
           }}>
-            Taller artesanal · Santiago, Chile
+            Santiago, Chile
           </p>
           <h1 style={{
             fontFamily: 'var(--font-serif)',

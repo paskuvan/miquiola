@@ -9,30 +9,30 @@ export default function Nav() {
 
   return (
     <header style={{
-      position: 'sticky',
-      top: 0,
+      position: 'relative',
       zIndex: 50,
       backgroundColor: 'var(--crema)',
       borderBottom: '1px solid var(--crema-2)',
     }}>
       <div style={{
         maxWidth: '1400px',
-        margin: '0 auto',
+        margin: '25px auto',
         padding: '0 2rem',
-        height: '80px',
+        height: '60px',
         padding: '0 2rem',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
       }}>
         {/* Logo */}
-        <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', lineHeight: 0, margin: '0 20px' }}>
           <Image
-            src="/logo.png"
+            src="/logo-light.png"
             alt="Miquiola"
-            width={120}
-            height={40}
-            style={{ objectFit: 'contain' }}
+            width={100}
+            height={34}
+            style={{ objectFit: 'contain', display: 'block' }}
+            className="nav-logo"
             priority
           />
         </Link>

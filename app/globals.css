@@ -53,4 +53,5 @@ img {
 @media (max-width: 900px) {
   .nav-desktop { display: none !important; }
   .nav-mobile-btn { display: block !important; }
+  .nav-logo { width: 70px !important; height: auto !important; }
 }

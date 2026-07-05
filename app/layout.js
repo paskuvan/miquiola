@@ -3,11 +3,11 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 
 export const metadata = {
-  title: 'Miquiola — Cerámica artesanal',
+  title: 'Miquiola — Tienda de Cerámica',
   description: 'Piezas únicas hechas a mano en Chile. Gres y porcelana con carácter.',
   icons: {
-    icon: '/logo.png',
-    apple: '/logo.png',
+    icon: '/logo-light.png',
+    apple: '/logo-light.png',
   },
 };
 
