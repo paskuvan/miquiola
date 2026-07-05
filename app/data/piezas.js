@@ -18,8 +18,7 @@ export const PIEZAS = [
     moods: ['mesa'],
     imagenes: ['/piezas/pieza_01.png'],
     descripcion: 'Fuente de cerámica con forma de cuchara, pintada a mano con un vibrante diseño de tomates y hojas verdes. Ideal para servir aperitivos, frutas o ensaladas.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'ensaladera-nebula',
@@ -31,8 +30,7 @@ export const PIEZAS = [
     moods: ['mesa'],
     imagenes: ['/piezas/ensaladero.png'],
     descripcion: 'Ensaladera de cerámica con diseño moderno y colores vibrantes. Ideal para servir ensaladas frescas o como pieza decorativa.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'servilletero-soft',
@@ -44,8 +42,6 @@ export const PIEZAS = [
     moods: ['mesa'],
     imagenes: ['/piezas/pieza_06.png'],
     descripcion: 'Original servilletero de cerámica inspirado en una pequeña biblioteca. Una pieza decorativa y funcional que aporta calidez y personalidad a la mesa.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
   },
   {
     slug: 'jarro-mistico',
@@ -57,8 +53,7 @@ export const PIEZAS = [
     moods: ['mesa'],
     imagenes: ['/piezas/pieza_07.png'],
     descripcion: 'Florero de cerámica con diseño tradicional en tonos azules pintado a mano. Perfecto para flores frescas, secas o como elemento decorativo.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'jarrito-greco',
@@ -72,8 +67,7 @@ export const PIEZAS = [
     moods: ['cocina'],
     imagenes: ['/piezas/pieza_08.png'],
     descripcion: 'Jarra de cerámica con elegantes flores azules pintadas a mano. Ideal para servir jugos o agua.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'tina-tiny',
@@ -83,10 +77,9 @@ export const PIEZAS = [
     disponible: true,
     unidades: 1,
     moods: ['decoracion'],
-    imagenes: ['/piezas/pieza_09.png'],
+    imagenes: ['/piezas/tina-tiny.png'],
     descripcion: 'Mini bañera de cerámica pintada a mano con motivos florales azules. Su diseño delicado la convierte en un hermoso objeto decorativo y funcional.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'plato-picoteo-serena',
@@ -98,8 +91,7 @@ export const PIEZAS = [
     moods: ['mesa', 'cocina'],
     imagenes: ['/piezas/pieza_10.png'],
     descripcion: 'Plato de cerámica decorado con delicados motivos botánicos. Ideal para aperitivos, postres o como pieza decorativa.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'jarrito-sol',
@@ -111,8 +103,7 @@ export const PIEZAS = [
     moods: ['mesa', 'cocina'],
     imagenes: ['/piezas/pieza_11.png'],
     descripcion: 'Jarra de cerámica con acabado rústico y esmaltes en tonos tierra. Una pieza versátil para servir bebidas, decorar o complementar espacios de estilo natural.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'plato-y-taza-green',
@@ -124,8 +115,7 @@ export const PIEZAS = [
     moods: ['cocina', 'mesa'],
     imagenes: ['/piezas/tazon-plato.png'],
     descripcion: 'Taza de cafe o con plato a juego y delicados motivos florales pintados a mano.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'jarro-amapola',
@@ -137,6 +127,7 @@ export const PIEZAS = [
     moods: ['decoracion'],
     imagenes: ['/piezas/pieza_13.png', '/piezas/pieza_13.png'],
     descripcion: 'Jarro de cerámica pintado a mano con diseño floral inspirado en la flora nativa.',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'plato-miau',
@@ -150,8 +141,6 @@ export const PIEZAS = [
     paleta: ['#B5A090', '#7A6558', '#E8DDD4'],
     descripcion: 'Bandeja de cerámica con diseño inspirado en los amantes de los gatos. Perfecta para servir aperitivos.',
     dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
-    cuidado: 'Apto lavavajillas y microondas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
   },
   {
     slug: 'picoteo-sweet',
@@ -166,8 +155,6 @@ export const PIEZAS = [
     paleta: ['#EDE8E0', '#D4CCC2', '#C5BDB4'],
     descripcion: 'Fuente rectangular de cerámica decorada con ilustraciones de mermelada, tostadas y frutillas. Ideal para servir postres, snacks o aperitivos con un toque alegre y.',
     dimensiones: '8 cm base · 22 cm alto',
-    cuidado: 'Solo exterior. No sumergir.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
   },
   {
     slug: 'cuchara-floral',
@@ -181,8 +168,6 @@ export const PIEZAS = [
     paleta: ['#A8B8C4', '#7A94A4', '#D4E0E8'],
     descripcion: 'Ideal para apoyar cubiertos, servir pequeñas porciones o decorar la cocina con un toque cálido y natural.',
     dimensiones: '20 cm diámetro · 5 cm hondo',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
   },
   {
     slug: 'vasito-shot',
@@ -195,8 +180,7 @@ export const PIEZAS = [
     moods: ['decoracion', 'mesa'],
     imagenes: ['/piezas/vasos-shot.png'],
     descripcion: 'Ideales para servir shots, degustaciones o como un encantador elemento decorativo.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'porta-te',
@@ -209,8 +193,7 @@ export const PIEZAS = [
     moods: ['mesa', 'cocina'],
     imagenes: ['/piezas/porta-te.png'],
     descripcion: 'Pequeños platos de cerámica con forma de tetera y delicados detalles pintados a mano. Ideales para apoyar bolsitas de té.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'jarritos-comanche',
@@ -223,8 +206,7 @@ export const PIEZAS = [
     moods: ['mesa', 'decoracion'],
     imagenes: ['/piezas/comanche.png'],
     descripcion: 'Jarritos con un elegante diseño geométrico pintado a mano. Su estilo atemporal la convierte en una pieza ideal para servir leche, crema, salsas o simplemente decorar con un toque de artesanía y calidez.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'salsera-ilusion',
@@ -236,8 +218,7 @@ export const PIEZAS = [
     moods: ['mesa', 'cocina'],
     imagenes: ['/piezas/pieza_18.png'],
     descripcion: 'Salsera de cerámica con plato integrado y cuchara a juego, pintada completamente a mano. Perfecta para servir salsas, miel, mermeladas o pequeños acompañamientos.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'tina-floral',
@@ -249,8 +230,6 @@ export const PIEZAS = [
     moods: ['decoracion'],
     imagenes: ['/piezas/tina-floral.png'],
     descripcion: 'Mini bañera de cerámica pintada a mano con motivos florales coloridos. Su diseño delicado la convierte en un hermoso objeto decorativo y funcional.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
   },
   {
     slug: 'tina-floreada',
@@ -262,21 +241,7 @@ export const PIEZAS = [
     moods: ['decoracion'],
     imagenes: ['/piezas/tina-floreada.png'],
     descripcion: 'Mini bañera de cerámica pintada a mano con motivos florales coloridos. Su diseño delicado la convierte en un hermoso objeto decorativo y funcional.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
-  },
-  {
-    slug: 'tina-griega',
-    nombre: 'Tina Griega',
-    subtitulo: 'Cerámica pintado bajo cubierta',
-    precio: 15000,
-    disponible: true,
-    unidades: 1,
-    moods: ['decoracion'],
-    imagenes: ['/piezas/pieza_21.png'],
-    descripcion: 'Mini bañera de cerámica pintada a mano con motivos florales azules. Su diseño delicado la convierte en un hermoso objeto decorativo y funcional.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'casita-elfo',
@@ -288,8 +253,7 @@ export const PIEZAS = [
     moods: ['decoracion', 'figuras', 'ediciones'],
     imagenes: ['/piezas/pieza_22.png'],
     descripcion: 'Casita de cerámica con iluminación interior que crea un ambiente cálido y acogedor. Una pieza encantadora para decorar cualquier espacio del hogar.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'tina-roja',
@@ -301,8 +265,7 @@ export const PIEZAS = [
     moods: ['decoracion'],
     imagenes: ['/piezas/tina-roja.png'],
     descripcion: 'Mini bañera de cerámica pintada a mano con motivos florales rojizos. Su diseño delicado la convierte en un hermoso objeto decorativo y funcional.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'anillero-gato',
@@ -315,8 +278,7 @@ export const PIEZAS = [
     moods: ['decoracion', 'figuras'],
     imagenes: ['/piezas/pieza_30.png'],
     descripcion: 'Adorables figuras de gatos de cerámica pintadas a mano. Un detalle lleno de personalidad para los anillos',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'jarra-girasol',
@@ -328,8 +290,7 @@ export const PIEZAS = [
     moods: ['mesa', 'cocina'],
     imagenes: ['/piezas/pieza_27.png'],
     descripcion: 'Jarra de cerámica pintada a mano con un vibrante diseño de girasol sobre fondo azul. Perfecta para lucir como florero.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'tina-rocio',
@@ -341,8 +302,7 @@ export const PIEZAS = [
     moods: ['decoracion'],
     imagenes: ['/piezas/tina-rocio.png'],
     descripcion: 'Mini bañera de cerámica pintada a mano con motivos florales coloridos. Su diseño delicado la convierte en un hermoso objeto decorativo y funcional.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'tina-naranja',
@@ -354,8 +314,7 @@ export const PIEZAS = [
     moods: ['decoracion'],
     imagenes: ['/piezas/tina-naranja.png'],
     descripcion: 'Mini bañera de cerámica pintada a mano con motivos florales naranjosos. Su diseño delicado la convierte en un hermoso objeto decorativo y funcional.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
   {
     slug: 'tablilla-picoteo',
@@ -367,8 +326,7 @@ export const PIEZAS = [
     moods: ['mesa'],
     imagenes: ['/piezas/tabilla-picoteo.png'],
     descripcion: 'Tabilla picoteo de cerámica con un delicado diseño inspirado en el amor por las mascotas. Perfecta para servir aperitivos, organizar accesorios, llaves o joyas.',
-    cuidado: 'Apto lavavajillas.',
-    proceso: 'Pieza seleccionada → Diseño del motivo → Pintado a mano con esmalte cerámico',
+    dimensiones: '8 cm diámetro · 9 cm alto · 280 ml',
   },
 ];
 

@@ -143,7 +143,32 @@ export default async function PDP({ params }) {
             {pieza.descripcion}
           </p>
 
-          
+          {/* Medidas */}
+          {pieza.dimensiones && (
+            <div style={{
+              borderTop: '1px solid var(--crema-2)',
+              paddingTop: '1.25rem',
+            }}>
+              <p style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.55rem',
+                letterSpacing: '0.1em',
+                color: 'var(--gris)',
+                textTransform: 'uppercase',
+                marginBottom: '0.4rem',
+              }}>
+                Medidas
+              </p>
+              <p style={{
+                fontFamily: 'var(--font-sans)',
+                fontSize: '0.85rem',
+                color: 'var(--carbon-2)',
+                fontWeight: 300,
+              }}>
+                {pieza.dimensiones}
+              </p>
+            </div>
+          )}
 
           {/* CTA */}
           <div style={{ marginTop: '1rem' }}>

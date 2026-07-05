@@ -1,6 +1,7 @@
 import './globals.css';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import ScrollTop from './components/ScrollTop';
 
 export const metadata = {
   title: 'Miquiola — Tienda de Cerámica',
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <Nav />
         <main>{children}</main>
         <Footer />
+        <ScrollTop />
       </body>
     </html>
   );

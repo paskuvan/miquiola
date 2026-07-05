@@ -170,53 +170,7 @@ export default function Nosotras() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section style={{
-        backgroundColor: 'var(--crema-2)',
-        padding: '5rem 2rem',
-        textAlign: 'center',
-      }}>
-        <p style={{
-          fontFamily: 'var(--font-serif)',
-          fontSize: 'clamp(1.2rem, 2.5vw, 1.8rem)',
-          fontWeight: 300,
-          fontStyle: 'italic',
-          marginBottom: '2rem',
-        }}>
-          ¿Te interesa una pieza o algo especial?
-        </p>
-        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a
-            href="https://wa.me/56944600260?text=Hola,%20me%20interesa%20una%20pieza%20de%20Miquiola"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              fontFamily: 'var(--font-mono)',
-              fontSize: '0.65rem',
-              letterSpacing: '0.12em',
-              textTransform: 'uppercase',
-              color: 'var(--crema)',
-              backgroundColor: 'var(--carbon)',
-              padding: '0.9rem 2rem',
-              textDecoration: 'none',
-            }}
-          >
-            Escribir por WhatsApp
-          </a>
-          <Link href="/coleccion" style={{
-            fontFamily: 'var(--font-mono)',
-            fontSize: '0.65rem',
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            color: 'var(--carbon)',
-            border: '1px solid var(--carbon)',
-            padding: '0.9rem 2rem',
-            textDecoration: 'none',
-          }}>
-            Ver colección
-          </Link>
-        </div>
-      </section>
+     
 
       <style>{`
         @media (max-width: 768px) {
