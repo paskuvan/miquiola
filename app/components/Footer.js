@@ -39,6 +39,13 @@ export default function Footer() {
           >
             WhatsApp
           </FooterLink>
+          <FooterLink
+            href="https://instagram.com/miquiola"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </FooterLink>
         </div>
 
         <div>
