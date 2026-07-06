@@ -192,7 +192,7 @@ function Destacadas({ piezas }) {
           fontWeight: 300,
           fontStyle: 'italic',
         }}>
-          Nuevas en el taller
+          Destacadas
         </h2>
         <Link href="/coleccion" style={{
           fontFamily: 'var(--font-mono)',

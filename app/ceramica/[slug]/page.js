@@ -270,7 +270,7 @@ export default async function PDP({ params }) {
           }}>
             <h2 style={{
               fontFamily: 'var(--font-serif)',
-              fontSize: '1.5rem',
+              fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
               fontWeight: 300,
               fontStyle: 'italic',
             }}>
