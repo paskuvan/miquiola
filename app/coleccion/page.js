@@ -21,7 +21,7 @@ export default function ColeccionPage() {
 function Coleccion() {
   const params = useSearchParams();
   const moodActivo = params.get('mood');
-  const [busqueda, setBusqueda] = useState('');
+  const [busqueda, setBusqueda] = useState(params.get('q') ?? '');
 
   const porMood = moodActivo
     ? PIEZAS.filter(p => p.moods.includes(moodActivo))

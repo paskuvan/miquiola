@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { PIEZAS, MOODS } from './data/piezas';
 import TarjetaPieza from './components/TarjetaPieza';
 import CarruselPiezas from './components/CarruselPiezas';
+import BuscadorHome from './components/BuscadorHome';
 
 export default function Home() {
   const slugsDestacadas = ['anillero-gato', 'tina-rocio', 'plato-miau', 'ensaladera-nebula', 'tina-floral', 'salsera-ilusion'];
@@ -130,7 +131,6 @@ function MoodBar() {
       borderTop: '1px solid var(--crema-2)',
       borderBottom: '1px solid var(--crema-2)',
       padding: '1rem 2rem',
-      overflowX: 'auto',
     }}>
       <div style={{
         maxWidth: '1400px',
@@ -138,36 +138,44 @@ function MoodBar() {
         display: 'flex',
         gap: '2.5rem',
         alignItems: 'center',
-        whiteSpace: 'nowrap',
-      }}>
-        <span style={{
-          fontFamily: 'var(--font-mono)',
-          fontSize: '0.6rem',
-          letterSpacing: '0.1em',
-          color: 'var(--gris)',
-          textTransform: 'uppercase',
-          flexShrink: 0,
-        }}>
-          Explorar por mood
-        </span>
-        {MOODS.map(mood => (
-          <Link
-            key={mood.slug}
-            href={`/coleccion?mood=${mood.slug}`}
-            style={{
-              fontFamily: 'var(--font-serif)',
-              fontSize: '1rem',
-              fontStyle: 'italic',
-              fontWeight: 300,
-              color: 'var(--carbon)',
-              textDecoration: 'none',
-              flexShrink: 0,
-            }}
-          >
-            {mood.label}
-          </Link>
-        ))}
+        justifyContent: 'space-between',
+      }} className="moodbar-row">
+        <div style={{ display: 'flex', gap: '2.5rem', alignItems: 'center', whiteSpace: 'nowrap' }}>
+          <span style={{
+            fontFamily: 'var(--font-mono)',
+            fontSize: '0.6rem',
+            letterSpacing: '0.1em',
+            color: 'var(--gris)',
+            textTransform: 'uppercase',
+            flexShrink: 0,
+          }}>
+            Explorar por mood
+          </span>
+          {MOODS.map(mood => (
+            <Link
+              key={mood.slug}
+              href={`/coleccion?mood=${mood.slug}`}
+              style={{
+                fontFamily: 'var(--font-serif)',
+                fontSize: '1rem',
+                fontStyle: 'italic',
+                fontWeight: 300,
+                color: 'var(--carbon)',
+                textDecoration: 'none',
+                flexShrink: 0,
+              }}
+            >
+              {mood.label}
+            </Link>
+          ))}
+        </div>
+        <BuscadorHome />
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .moodbar-row { flex-direction: column; align-items: flex-start !important; gap: 1.25rem !important; }
+        }
+      `}</style>
     </section>
   );
 }
