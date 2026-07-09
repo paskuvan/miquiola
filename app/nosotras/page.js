@@ -50,7 +50,7 @@ export default function Nosotras() {
         }}>
           <Image
             src="/piezas/pieza_14.png"
-            alt="Miquiola Cerámica pintado bajo cubierta"
+            alt="Miquiola Cerámica pintada bajo cubierta"
             fill
             style={{ objectFit: 'cover' }}
             sizes="50vw"

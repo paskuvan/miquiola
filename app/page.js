@@ -79,7 +79,7 @@ function Hero() {
           maxWidth: '380px',
           fontWeight: 300,
         }}>
-          Cerámica pintado bajo cubierta
+          Cerámica pintada bajo cubierta
         </p>
 
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -204,7 +204,7 @@ function Destacadas({ piezas }) {
         </h2>
         <Link href="/coleccion" style={{
           fontFamily: 'var(--font-mono)',
-          fontSize: '0.65rem',
+          fontSize: '0.70rem',
           letterSpacing: '0.1em',
           textTransform: 'uppercase',
           color: 'var(--gris)',
