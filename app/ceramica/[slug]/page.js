@@ -254,9 +254,24 @@ export default async function PDP({ params }) {
               textAlign: 'center',
               lineHeight: 1.6,
             }}>
-              
+
             </p>
           </div>
+
+          {/* Volver al inicio */}
+          <Link href="/" style={{
+            fontFamily: 'var(--font-mono)',
+            fontSize: '0.70rem',
+            letterSpacing: '0.1em',
+            textTransform: 'uppercase',
+            color: 'var(--gris)',
+            textDecoration: 'none',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.4rem',
+          }}>
+            ← Volver al inicio
+          </Link>
         </div>
       </section>
 

@@ -204,7 +204,7 @@ function Destacadas({ piezas }) {
         </h2>
         <Link href="/coleccion" style={{
           fontFamily: 'var(--font-mono)',
-          fontSize: '0.70rem',
+          fontSize: '0.80rem',
           letterSpacing: '0.1em',
           textTransform: 'uppercase',
           color: 'var(--gris)',
